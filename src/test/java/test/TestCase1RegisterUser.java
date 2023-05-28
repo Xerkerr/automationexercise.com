@@ -1,7 +1,8 @@
-package automationecercise;
+package test;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -12,9 +13,13 @@ public class TestCase1RegisterUser {
     //2. Navigate to url 'http://automationexercise.com'
      Driver.getDriver().get(ConfigReader.getProperty("automationexerciseUrl"));
     //3. Verify that home page is visible successfully
-        Assert.assertTrue();
+       String expectedIcerik = ConfigReader.getProperty("homePage");
+       String actualIcerik = Driver.getDriver().getCurrentUrl();
+       SoftAssert softAssert = new SoftAssert();
+       softAssert.assertTrue(actualIcerik.contains(expectedIcerik), "Home page visible");
 
     //4. Click on 'Signup / Login' button
+///
     //5. Verify 'New User Signup!' is visible
     //6. Enter name and email address
     //7. Click 'Signup' button
