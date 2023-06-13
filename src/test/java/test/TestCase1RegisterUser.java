@@ -19,7 +19,8 @@ public class TestCase1RegisterUser {
        softAssert.assertTrue(actualIcerik.contains(expectedIcerik), "Home page visible");
 
     //4. Click on 'Signup / Login' button
-///
+
+
     //5. Verify 'New User Signup!' is visible
     //6. Enter name and email address
     //7. Click 'Signup' button

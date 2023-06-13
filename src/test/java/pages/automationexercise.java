@@ -15,6 +15,10 @@ public class automationexercise {
     @FindBy(xpath ="//header[@id='header']")
     public WebElement homepage;
 
+//Signup / Login
+    @FindBy(xpath ="//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a/text()")
+    public WebElement Signup;
+
 
 
 }
